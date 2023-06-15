@@ -73,7 +73,7 @@ When calling this function, something doesn't work as expected. What fix can you
 to solve the problem? 
 
 You'll know the function works if you manage to have the expected output when running in
-`node`:
+`node`. (Remember: if you want to require the above function from a file, then you have to [export it first](./04_functions.md#Exporting-a-function))
 
 ```javascript
 > isValidLength('00');
@@ -83,7 +83,48 @@ false
 true
 ```
 
+<details>
+<summary>Reveal suggested solution</summary>
+
+The original function simply wasn't returning anything. 
+
+Take a look at the updated code, and see if you can answer the questions below.
+
+```javascript
+const isValidLength = (phoneNumber) => {
+  const validLength = 11;
+  if (phoneNumber.length === validLength) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// tests, for running in the terminal with node filename.js
+console.log("Check if 00 is valid", isValidLength('00'));
+console.log("Check if 00112233445 is valid", isValidLength('00112233445'));
+```
+
+<details>
+<summary>Why do I need two return statements?</summary>
+
+Remember: We use `if..else` to control the flow of our program. Every possible path needs to return a value.
+</details> 
+
+<details>
+<summary>What did I change to get strict equality?</summary>
+
+I changed `==` to `===`
+
+This change wasn't necessary to make the program work. But it's a good habit to get into.
+</details>
+
+</details>
+
+
 ## Challenge
+
+> This is a process feedback challenge: please do a screen recording of yourself working on it and submit the file using [this link](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=jsfun_1)
 
 Write a `fizzBuzz` function in JavaScript. As a reminder, this function should take a
 number as argument, and then either:

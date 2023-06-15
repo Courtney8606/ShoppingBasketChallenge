@@ -14,6 +14,7 @@ In this section you'll learn about arrays. We'll look at how to perform basic op
 on arrays, but also more complex things that can be useful in our programs.
 
 ```js
+// Assign an array to the constant numbers
 const numbers = [1, 2, 3, 4];
 
 const newNumbers = numbers.concat(5); // adds one element and return a new array
@@ -76,10 +77,11 @@ To complete this exercise you will have to find out:
 2. Now, make sure this function *does not* add the number *if the array's length is
    already 5 or greater* — it should just return the array untouched in that case.
 
-Once your function is written, you should be able to type the following code and have the
+Once your function is written, you should be able to type the following code into the node REPL and have the
 exact same output:
 
 ```javascript
+> const addToBatch = require("./addToBatch.js")
 > addToBatch([1], 3); 
 [ 1, 3 ]
 
@@ -95,6 +97,16 @@ exact same output:
 > addToBatch([1, 2, 3, 4, 5, 6, 7, 8, 9], 10); 
 [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 ```
+
+Note: If your function is outputting something like
+
+```javaScript
+> addToBatch()
+[1, 3]
+undefined
+```
+
+Then you were probably using `console.log` to print the value `[1, 3]` and not returning anything (so the return value is `undefined`)
 
 <details>
 <summary>Reveal suggested solution</summary>

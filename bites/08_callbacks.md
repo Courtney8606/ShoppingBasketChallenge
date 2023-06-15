@@ -30,7 +30,7 @@ first.
 Callbacks are used a lot in JavaScript, so it's important to understand how they work. You'll see
 later how they can be useful.
 
-As the name imply, a callback is **a function**:
+A callback is **a function**:
 
 ```js
 const printMessage = () => {

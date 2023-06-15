@@ -72,10 +72,10 @@ this function.
    function should return only numbers that contain *10 characters or less*. It should
    make use of the function `checkLength` written previously.
 
-Once your function is written, you should be able to type the following code and have the
-exact same output:
+Once your function is written, you should be able to type the following code and have the exact same output:
 
 ```javascript
+> const filterLongNumbers = require("./filterLongNumbers.js");
 > const numbers = [
   '1763687364',
   '4763687363',
@@ -121,6 +121,7 @@ To complete this exercise you'll have to:
 Once your function is written, you should be able to type the following code and have the
 exact same output:
 ```javascript
+> const generateMessages = require("./generateMessages.js");
 > const names = ['Anna', 'Laura', 'Josh', 'Min', 'Karla'];
 
 > generateMessages(names);
@@ -164,6 +165,7 @@ To complete this exercise, you'll have to:
 Once your function is written, you should be able to type the following code and have the
 exact same output:
 ```javascript
+> const generateMessages = require("./generateMessages.js");
 > const namesAndDiscounts = [
   { name: 'Anna', discount: 50 },
   { name: 'Laura', discount: 40 },

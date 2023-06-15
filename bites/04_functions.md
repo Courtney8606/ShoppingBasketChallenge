@@ -24,16 +24,16 @@ known as an _anonymous function_.
 If we want to use it later, we need to give it a name by storing it in a variable:
 ```js
 // 1. This function accepts no arguments
-const printMessage = () => {
+const printMessage1 = () => {
   console.log('Hi there!');
 }
 
-// 2. This function accepts one
-const printMessage = (message) => {
+// 2. This function accepts one parameter
+const printMessage2 = (message) => {
   console.log(message);
 }
-
-printMessage('Hi there!');
+// 3. So far nothing is printed to the console. A function must be called before it runs:
+printMessage2('Hi there!');
 ```
 
 **Note:** We use the `return` keyword to return a value from the function.
@@ -59,7 +59,7 @@ getName(); // returns undefined
 even if it doesn't take any arguments. 
 
 Take a look at the code below. What do you think `something` will be? Have a go
-at running this code, and see if your intuition is correct by `console.log`ing `something`.
+at running this code in the REPL.
 
 ```js
 const returnFour = () => {
@@ -67,7 +67,24 @@ const returnFour = () => {
 };
 
 const something = returnFour;
+console.log(something);
 ```
+
+<details>
+<summary>Reveal the answer</summary>
+
+We get two lines:
+
+```js
+[Function: returnFour]
+undefined
+```
+
+The first line is the value of `something`. We made it equal to a function rather than the value returned by the function -- because we didn't call the function by using brackets.
+
+The second line is what `console.log` returns. Printing to the screen is what it does. It has no return value.
+
+</details>
 
 ### Exporting a function
 
@@ -115,17 +132,63 @@ Require and call that function in `node` - you should get the following result:
 'Hello'
 ```
 
+Note: if you are getting output which looks like this:
+
+```javaScript
+> sayHello();
+'Hello'
+undefined
+```
+
+Then you were probably using `console.log` to print the value `Hello` and not returning anything (so the return value is `undefined`)
+
 [Example solution](https://youtu.be/l6UR1mK6dsg?t=628)
 
 ### Debugging question
 
-Your colleague is trying to call the function `sayHello` and print its result using
-`console.log` — however, it doesn't work as expected: why? Make the fix so it prints the
-return value of the function, as expected.
+Your colleague is trying to call the function `sayHello` and print its result using `console.log` — however, it doesn't work as expected: why? Make the fix so it prints the return value of the function, as expected.
 
 ```javascript
 console.log(sayHello);
 ```
+
+### Running the same code with node and in the node REPL
+
+If we type the code below into the node REPL
+
+```javaScript
+const giveMeTheAnswer = () => {
+  return 42
+}
+
+giveMeTheAnswer();
+```
+The REPL will print the answer: 42
+
+But if you put that same code in a file called `theAnswer.js` and run it with
+
+```bash
+node theAnswer.js
+```
+Then nothing is printed to the console. Why?
+
+<details>
+<summary>Reveal the answer</summary>
+
+REPL stands for Read, Evaluate, Print, Loop. And that is what it does. It reads what you type, evaluates it and prints that evaluation to the screen. Then it repeats all this.
+
+Effectively: the REPL has an auto-print. However when running a file using `node`, only values and strings output using `console.log()` will be printed on the terminal. The function is run, but nothing is done with the value it returns.
+
+One possible fix would be:
+
+```javaScript
+const giveMeTheAnswer = () => {
+  return 42
+}
+
+console.log(giveMeTheAnswer());
+```
+</details>
 
 ## Exercise
 

@@ -166,6 +166,27 @@ example code above.
 
 Require the two classes into the `node` REPL to verify it's working.
 
+<details>
+<summary>Reveal suggested solution<summary>
+
+```javaScript
+class UserBase {
+  constructor(arrayOfNames) {
+    this.users = arrayOfNames;
+  }
+  count() {
+    return this.users.length;
+  }
+  getNames() {
+    return this.users.map((user) => user.getName());
+  }
+  getIntroductions() {
+    return this.users.map((user) => user.getIntroduction());
+  }
+}
+```
+</details>
+
 ## Challenge
 
 Implement the classes `Candy` and `ShoppingBasket` so you can require them into `node` and

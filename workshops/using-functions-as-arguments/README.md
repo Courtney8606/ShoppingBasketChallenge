@@ -30,7 +30,7 @@ should be a function. No matter what function it's given as `callback`,
 the callback will be executed and will be passed `'Makers'` as an argument.
 ```js
 const makersBiggestFan = (callback) => {
-  return callback("Makers");
+  callback("Makers");
 };
 ```
 
@@ -106,7 +106,7 @@ Can you write a function called `obnoxiousFn` that takes a callback, and announc
 // Example behaviour
 const four = obnoxiousFn(() => {
   return 2 + 2;
-}); // Should print 'EXECUTING CALLBACK!' and return 4
+}); // Should print 'EXECUTING CALLBACK!!' and return 4
 console.log(four); // Should print 4
 ```
 

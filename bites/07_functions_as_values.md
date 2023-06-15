@@ -12,26 +12,53 @@ Learn to use functions as values, and as arguments for other functions.
 
 ## Introduction
 
-In JavaScript, functions are values in their own right, like for other types — numbers,
-strings, etc.
+In JavaScript, functions are values in their own right, like for other types — numbers, strings, etc. But we don't always see the assignment to a variable name. So to make it explicit, consider the following. (Once you have copied the code, you can run it with `node functionsAsValues.js`)
 
 ```js
-// Creating a function
-const aFunction = () => {
+// copy to a file called functionsAsValues.js
+// This is a function. It has no name and no parameters
+() => {
   return 123;
 }
-
-// Functions can be referenced as values, without the brackets ()
-// here we are essentially assigning the exact same function to a new name.
-const anotherFunction = aFunction;
-
-// When using the brackets (), we're *calling* the function
-// so we'll get the value returned by it.
-const returnValue = anotherFunction();
+// This is a function with one parameter, but still no name
+// And using briefer syntax that might help when we get to .map and .filter
+(n) => 2*n
+// you can see that it is a function like this
+console.log((n) => 2*n)
 ```
 
-This also mean we can pass a function to another one, as an argument. Let's see one
-example:
+When the file is run, we get `[Function (anonymous)]` printed to the console. We don't get details about the function, but JavaScript knows ***what*** it is.
+
+If we take that function and assign it to a variable, we get a named function. Replace the code above with this:
+
+```js
+const doubleNumber = (n) => 2*n
+console.log(doubleNumber)
+```
+
+We get a bit more detail: `[Function: doubleNumber]` is printed to the console. That's not enough detail to know what the function does (it might have been badly named). But we know it is a function.
+
+One last experiment: Let's assign our named function to another variable. Add this to the above code:
+
+```js
+const simpleCalculation = doubleNumber
+console.log(simpleCalculation)
+```
+
+What do you think will be printed to the console? Check if you are right by running the file again with `node functionsAsValues.js`
+
+## So what is the impact of functions being values?
+
+Calling a function is natural. We might say:
+
+```js
+const doubleNumber = (n) => 2*n
+let newSalary = doubleNumber(1000000)
+```
+
+And we expect `newSalary` to have the value that was returned by the function.
+
+But, since functions are values, they can be passed to another function as an argument and they can be used as the return value of a function.
 
 ```js
 const uppercaseMessage = (message) => {
@@ -47,8 +74,7 @@ const transform = (message, transformFunction) => {
 transform("hello", uppercaseMessage);
 ```
 
-You're encouraged to run the above in `node` and play with it to get a good understanding
-of how it works.
+You're encouraged to run the above in `node` and play with it to get a good understanding of how it works.
 
 ## Demonstration
 
@@ -111,8 +137,6 @@ console.log(notify('hello@makers.tech.test', notifyByEmail));
 console.log(notify('+10000000000', notifyByText));
 ```
 </details>
-
-
 
 [Next Challenge](08_callbacks.md)
 

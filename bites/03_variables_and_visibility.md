@@ -58,8 +58,7 @@ first.
 
 ## Challenge
 
-Can you find the problem in the following program? Make the fix, so the code prints "Hello
-Makers" when run into `node`.
+Can you find the problem in the following program? Make the fix, so the code prints "Hello Makers" when typed into the `node` REPL.
 
 ```javascript
 const greeting = 'Hello ';
