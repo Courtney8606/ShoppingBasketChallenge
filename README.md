@@ -29,11 +29,13 @@ build a more complex coding challenge using all of those new concepts.
 Work through these exercises designed to train the basics of JavaScript. If you already
 know JavaScript or you feel like a challenge, feel free to skip a few of these steps.
 
+Some of these challenges include [Process Feedback Challenges](https://github.com/makersacademy/golden-square-in-python/blob/main/pills/process_feedback_challenges.md), in which you record yourself performing the task and share it with your coach for feedback. These are tagged with a 📡.
+
 1. [Running JavaScript](./bites/01_running_javascript.md)
 2. [Running files](./bites/02_running_files.md)
 3. [Variables and visibility](./bites/03_variables_and_visibility.md)
 4. [Functions](./bites/04_functions.md)
-5. [Conditionals](./bites/05_conditionals.md)
+5. [Conditionals](./bites/05_conditionals.md) 📡
 6. [Loops](./bites/06_loops.md)
 7. [Functions as values](./bites/07_functions_as_values.md)
 8. [Callbacks](./bites/08_callbacks.md)
@@ -48,9 +50,11 @@ Work through challenges designed to help you learn how to use JavaScript in a re
 application, including unit tests, multiple classes, and external dependencies on
 packages and remote APIs.
 
-1. [Testing with Jest](./challenges/01_testing.md)
+Some of these challenges include [Process Feedback Challenges](https://github.com/makersacademy/golden-square-in-python/blob/main/pills/process_feedback_challenges.md), in which you record yourself performing the task and share it with your coach for feedback. These are tagged with a 📡.
+
+1. [Testing with Jest](./challenges/01_testing.md) 📡
 2. [A Search function](./challenges/02_search_function.md)
-3. [A Shopping basket](./challenges/03_shopping_basket.md)
+3. [A Shopping basket](./challenges/03_shopping_basket.md) 📡
 4. [A Thermostat](./challenges/04_thermostat.md)
 5. [A Pokédex](./challenges/05_calling_apis.md)
 6. [A Weather client](./challenges/06_weather_api.md)
