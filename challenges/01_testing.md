@@ -105,7 +105,7 @@ two numbers.
 
 ## Challenge
 
-> This is a process feedback challenge: please do a screen recording of yourself working on it and submit the file using [this link](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=jsfun_2)
+> This is a process feedback challenge: please do a screen recording of yourself working on it and submit the file using [this link](https://airtable.com/shrvo9ePjlwnaiLv5?prefill_Item=jsfun_2)
 
 You will write tests for the `fizzBuzz` function you've defined earlier — name the file
 containing the tests `fizzbuzz.test.js`.

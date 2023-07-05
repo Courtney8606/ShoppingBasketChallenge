@@ -71,7 +71,7 @@ for this exercise.
 
 ## Challenge
 
-> This is a process feedback challenge: please do a screen recording of yourself working on it and submit the file using [this link](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=jsfun_3)
+> This is a process feedback challenge: please do a screen recording of yourself working on it and submit the file using [this link](https://airtable.com/shrvo9ePjlwnaiLv5?prefill_Item=jsfun_3)
 
 1. Setup the project directory and install Jest.
 2. Test-drive and implement the `Candy` class (test file should be `candy.test.js`).

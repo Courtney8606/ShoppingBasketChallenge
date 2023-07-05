@@ -124,7 +124,7 @@ This change wasn't necessary to make the program work. But it's a good habit to 
 
 ## Challenge
 
-> This is a process feedback challenge: please do a screen recording of yourself working on it and submit the file using [this link](https://airtable.com/shrNFgNkPWr3d63Db?prefill_Item=jsfun_1)
+> This is a process feedback challenge: please do a screen recording of yourself working on it and submit the file using [this link](https://airtable.com/shrvo9ePjlwnaiLv5?prefill_Item=jsfun_1)
 
 Write a `fizzBuzz` function in JavaScript. As a reminder, this function should take a
 number as argument, and then either:
