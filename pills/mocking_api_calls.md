@@ -26,8 +26,6 @@ This is useful for feature tests, where we want to test multiple parts of our
 code working together, but still want to insulate the test from random external
 failures.
 
-We can use it like this:
-
 Let's say we have some function `apiRequest` which fetches some data, and
 returns it in a Promise. We could mock that fetch request like this:
 
